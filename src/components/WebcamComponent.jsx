@@ -28,9 +28,6 @@ export default function WebcamComponent() {
             setIsRequestInProgress(false);
         });
 
-        console.log("Status: ", isRequestInProgress);
-        console.log("webcamRef: ", webcamRef.current);
-
         const interval = setInterval(() => {
             if (!isRequestInProgress && webcamRef.current) {
                 capture();
@@ -50,7 +47,6 @@ export default function WebcamComponent() {
             console.error("Failed to capture image from webcam.");
             return;
         }
-        console.log("image source: ", imageSrc);
         try {
             const blob = await fetch(imageSrc).then((res) => res.blob());
             const reader = new FileReader();
