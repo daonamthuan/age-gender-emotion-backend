@@ -37,8 +37,14 @@ export default function UploadComponent() {
     return (
         <div className="upload-container">
             <div className="file-btn-container">
-                <input type="file" onChange={handleFileChange} />
-                <button className="btn-predict" onClick={handleUpload}>Predict</button>
+                <input
+                    className="file-btn"
+                    type="file"
+                    onChange={handleFileChange}
+                />
+                <button className="btn-predict" onClick={handleUpload}>
+                    Predict
+                </button>
             </div>
 
             {imageUrl && (
