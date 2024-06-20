@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./UploadComponent.css";
 
 export default function UploadComponent() {
     const [file, setFile] = useState(null);
@@ -37,7 +38,7 @@ export default function UploadComponent() {
         <div className="upload-container">
             <div className="file-btn-container">
                 <input type="file" onChange={handleFileChange} />
-                <button onClick={handleUpload}>Predict</button>
+                <button className="btn-predict" onClick={handleUpload}>Predict</button>
             </div>
 
             {imageUrl && (

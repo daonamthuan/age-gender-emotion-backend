@@ -7,8 +7,8 @@ export default function PredictionApp() {
     const [mode, setMode] = useState("webcam");
 
     return (
-        <div>
-            <h1>Age, Gender and Emotion Prediction</h1>
+        <div className="container">
+            <h1>Age, Gender and Emotion <br/> Prediction</h1>
             <div className="btn-mode">
                 <button onClick={() => setMode("webcam")}>Use Webcam</button>
                 <button onClick={() => setMode("upload")}>Upload Image</button>
